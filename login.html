@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoesClean - Login</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #fce4ec; /* Pinkish */
+            font-family: 'Arial', sans-serif;
+        }
+        .login-card {
+            margin-top: 7rem;
+            text-align: center;
+            padding: 2.5rem;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .login-card img {
+            max-width: 120px;
+            margin-bottom: 1.5rem;
+        }
+        .login-card h4 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #6EC8FF;
+        }
+        .login-card p {
+            color: #666;
+            font-size: 1rem;
+        }
+        .form-control {
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+        .form-control:focus {
+            border-color: #6EC8FF;
+            box-shadow: 0 0 5px rgba(110, 200, 255, 0.5);
+        }
+        .btn-primary {
+            background-color: #6EC8FF;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+        .btn-primary:hover {
+            background-color: #50B6E7;
+        }
+        .text-muted {
+            font-size: 0.9rem;
+        }
+        .mt-3 a {
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-card mx-auto col-md-8 col-lg-6 p-5">
+            <img src="img/logo.png" alt="ShoesClean Logo" class="img-fluid mb-4">
+            <h4 class="mb-3 text-primary">Welcome Back!</h4>
+            <p class="mb-4">Log in to schedule your laundry pickup and cleaning services.</p>
+            <form onsubmit="redirectToMenu(event)">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Username" required>
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 py-2">Log In</button>
+            </form>
+            <p class="mt-2">
+                <a href="register.html" class="text-decoration-none text-muted">Don't have an account? Sign up</a>
+            </p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function redirectToMenu(event) {
+            event.preventDefault(); // Prevent form submission
+            window.location.href = "index.html"; // Redirect to index.html
+        }
+    </script>
+</body>
+</html>
